@@ -68,6 +68,15 @@ if [ "$1" = 'cassandra' ]; then
 		num_tokens \
 		rpc_address \
 		start_rpc \
+		commitlog_sync \
+  		commitlog_sync_period_in_ms \
+  		concurrent_reads \
+  		concurrent_writes \
+  		concurrent_counter_writes \
+  		memtable_flush_writers \
+  		trickle_fsync \
+  		trickle_fsync_interval_in_kb \
+  		compaction_throughput_mb_per_sec \
 	; do
 		var="CASSANDRA_${yaml^^}"
 		val="${!var}"
